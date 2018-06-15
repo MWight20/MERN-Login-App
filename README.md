@@ -1,5 +1,5 @@
 # MERN-Login-App
-This is a MERN stack login app that is based on [this MERN boilerplate](https://github.com/keithweaver/MERN-boilerplate) project.
+This is a MERN stack login app that is based on [this MERN boilerplate project.](https://github.com/keithweaver/MERN-boilerplate) 
 
 This project uses these technologies:
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
