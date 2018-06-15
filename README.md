@@ -22,7 +22,7 @@ npm install
 Production mode:
 
 ```shell
-npm start
+npm run start
 ```
 
 Development (Webpack dev server) mode:
