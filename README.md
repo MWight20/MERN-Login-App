@@ -1,4 +1,4 @@
-# MERN-boilerplate
+# MERN-Login-App
 This is a MERN stack login app that is based on [this MERN boilerplate](https://github.com/keithweaver/MERN-boilerplate) project.
 
 This project uses these technologies:
