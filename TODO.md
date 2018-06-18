@@ -18,9 +18,7 @@
     - Logout functionality is now available on the navbar
  - Content.js has been added and given validation for users
  - Content.js now contains signup form for new users
-```
-
-```
+ 
  6/15/2018 :
  - Initial commit
 ```
