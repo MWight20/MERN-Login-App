@@ -198,12 +198,9 @@ class Home extends Component {
                 onChange={this.onTextboxChangeSignInPassword}
               />
               <br />
-              <br />
-                <button onClick={this.onSignIn}>Sign in</button>
+                <button className="button" onClick={this.onSignIn}>Sign in</button>
             </div>
 
-            <br />
-            <br />
             </div>
           </div>
         );
