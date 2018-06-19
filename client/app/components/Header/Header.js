@@ -88,6 +88,10 @@ class Header extends Component {
       token,
     } = this.state;
     
+    var floatRight = {
+      float: 'right',
+      
+    };
 
     //if user is signed in
     if(token) {
@@ -97,7 +101,7 @@ class Header extends Component {
             <ul> 
               <li><Link to="/" id="navLink"> Home </Link></li>
               <li><Link to="/Content" id="navLink"> Content </Link></li>
-              <li><Link to="/" id="navLink" onClick={this.logout}> logout </Link></li> 
+              <li style={floatRight}><Link to="/" id="navLink" onClick={this.logout} > logout </Link></li> 
               
             </ul>
           </div>

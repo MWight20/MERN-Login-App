@@ -16,9 +16,14 @@ hr {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .navBar {
   margin:0;
   padding-left: 15%;
+  padding-right: 15%;
 }
 
 #navLink {
@@ -27,6 +32,7 @@ hr {
   text-decoration: none;
   list-style-type: none;
   float: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul {
@@ -36,3 +42,59 @@ ul {
   padding: 20px 0px 20px 0px;
 }
 
+.signInContainer {
+  margin: auto;
+  margin-top: 10%;
+  width: 350px;
+  background: #FFF;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #555555;
+  padding: 10px 20px 10px 20px;
+}
+
+.signInForm {
+  text-align: center;
+}
+
+.signInForm input{
+  margin: 2px 20px 2px 20px;
+  width: 225px;
+}
+
+.contentContainer {
+  margin: auto;
+  margin-top: 10%;
+  width: 350px;
+  background: #FFF;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #555555;
+  padding: 10px 20px 10px 20px;
+  
+}
+
+.signUpForm {
+  text-align: center;
+}
+
+.signUpForm input{
+  margin: 2px 20px 2px 20px;
+  width: 225px;
+}
+
+.button {
+  background-color: #FFF; 
+  border: none;
+  color: #555555;
+  border:thin solid #555555;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+  margin: 8px 0px 8px 0px;
+}

@@ -121,8 +121,8 @@ class Home extends Component {
           });
         }
       });
-      window.location.reload();
-  }
+      //window.location.reload();  //This is causing a bug when trying to log in
+  } 
 
   logout() {
     this.setState({
@@ -175,33 +175,36 @@ class Home extends Component {
     if (!token) {
       return (
         <div>
-          {
-            (signInError) ? (
-              <p>{signInError}</p>
-            ): (null)
-          }
-          <div>
-            <p>Sign in</p>
-            <input 
-              type="email" 
-              placeholder="Email" 
-              value={signInEmail}
-              onChange={this.onTextboxChangeSignInEmail}
+          <div className="signInContainer">
+            {
+              (signInError) ? (
+                <p>{signInError}</p>
+              ): (null)
+            }
+            <div className="signInForm">
+              <p>Sign in</p>
+              <input 
+                type="email" 
+                placeholder="Email" 
+                value={signInEmail}
+                onChange={this.onTextboxChangeSignInEmail}
 
-            />
-            <br />
-            <input
-              type="password" 
-              placeholder="Password" 
-              value ={signInPassword} 
-              onChange={this.onTextboxChangeSignInPassword}
-            />
-            <br />
-              <button onClick={this.onSignIn}>Sign in</button>
-          </div>
+              />
+              <br />
+              <input
+                type="password" 
+                placeholder="Password" 
+                value ={signInPassword} 
+                onChange={this.onTextboxChangeSignInPassword}
+              />
+              <br />
+              <br />
+                <button onClick={this.onSignIn}>Sign in</button>
+            </div>
 
-          <br />
-          <br />
+            <br />
+            <br />
+            </div>
           </div>
         );
     }

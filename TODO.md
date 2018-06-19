@@ -1,18 +1,19 @@
 #TO-DO
 ```
-- Add CSS to Home.js
-- Add Content.js page
-- Add CSS to Content.js
-- Set up token verification for Content.js
-- Set up Signup functionality on Content.js (replacing Home.js signup)
+- Add CSS
 - modify modularity of Fetch API calls to belong in their own folder
-- Add login button logic to navBar
-- Add logout button logic to navBar
+- Find a way for page to reload automatically on signin and logout: navbar doesn't load "home","content", and "logout" without manual refresh
+
+-Model signin and register as a form instead of button event. (or find a way to click enter to start event)
 ```
 
 #Log-History
 ```
- 6/18/2018 : 
+
+ 6/18/2018 :
+ - Added css for login and signup forms
+
+ 6/17/2018 : 
  - Transformed single page login(Home.js) into multiple pages
  - navbar now validates current user and updates it's contents with new links
     - Logout functionality is now available on the navbar

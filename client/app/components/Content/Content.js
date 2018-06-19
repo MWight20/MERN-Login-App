@@ -185,42 +185,48 @@ class Content extends Component {
     if (token) {
       return(
         <div>
-
-          <div className="signUpForm">
-          {
-              (signUpError) ? (
-              <p>{signUpError}</p>
-              ): (null)
-          }
-          <p>Sign up</p>
-          <input 
-              type="text" 
-              placeholder="First Name"
-              value={signUpFirstName} 
-              onChange={this.onTextboxChangeSignUpFirstName}
-          />
-          <br />
-          <input 
-              type="text" 
-              placeholder="Last Name" 
-              value={signUpLastName}
-              onChange={this.onTextboxChangeSignUpLastName}
-          />
-          <br />
-          <input 
-              type="email"
-              placeholder="Email" 
-              value={signUpEmail}
-              onChange={this.onTextboxChangeSignUpEmail}
-          />
-          <br />
-          <input 
-              type="password" 
-              placeholder="Password"
-              value={signUpPassword}
-              onChange={this.onTextboxChangeSignUpPassword}
-          /><br />
-          <button onClick={this.onSignUp}>Sign Up</button>
+          <div className="contentContainer">
+            <div className="signUpForm">
+            {
+                (signUpError) ? (
+                <p>{signUpError}</p>
+                ): (null)
+            }
+            <p>Register New User:</p>
+            <input 
+                type="text" 
+                placeholder="First Name"
+                id="firstNameSignUp"
+                value={signUpFirstName} 
+                onChange={this.onTextboxChangeSignUpFirstName}
+            />
+            <br />
+            <input 
+                type="text" 
+                placeholder="Last Name" 
+                id="lastNameSignUp"
+                value={signUpLastName}
+                onChange={this.onTextboxChangeSignUpLastName}
+            />
+            <br />
+            <input 
+                type="email"
+                placeholder="Email" 
+                id="emailSignUp"
+                value={signUpEmail}
+                onChange={this.onTextboxChangeSignUpEmail}
+            />
+            <br />
+            <input 
+                type="password" 
+                placeholder="Password"
+                id="passwordSignUp"
+                value={signUpPassword}
+                onChange={this.onTextboxChangeSignUpPassword}
+            />
+            <br />
+            <button className="button" onClick={this.onSignUp}>Sign Up</button>
+            </div>
           </div>
         </div>
       );
