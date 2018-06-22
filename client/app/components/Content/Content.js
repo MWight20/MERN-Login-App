@@ -20,6 +20,7 @@ class Content extends Component {
         signUpLastName: '',
         signUpEmail: '',
         signUpPassword: '',
+        userRow: [],
       };
     
   
@@ -61,7 +62,37 @@ class Content extends Component {
         isLoading: false,
       })
     }
-  }
+
+    //fetch and load data for table
+    fetch('/api/users/listNames')
+    .then(result => result.json())
+    .then(data => {
+      /*let userData = data.result.map((user) => {
+        return(
+          <p>{user.userData.firstName}</p>
+        )
+      })
+      */
+      console.log(data.result);
+
+      let userData = data.result.map((user) => {
+        return(
+          <tr key={user._id}>
+            <td>{user.firstName}</td>
+            <td>{user.lastName}</td>
+            <td>{user.email}</td>
+          </tr>
+        )
+      });
+
+      console.log(userData);
+
+      this.setState({userRow: userData});
+      //console.log(userJSON.stringify());
+    
+    });//end fetch names
+
+  }//end componentDidMount()
 
 
   onTextboxChangeSignUpEmail(event) {
@@ -167,6 +198,9 @@ class Content extends Component {
     }
   }
 
+
+
+
   render() {
     const {
       isLoading,
@@ -176,6 +210,7 @@ class Content extends Component {
       signUpLastName,
       signUpEmail,
       signUpPassword,
+      nameJSON
     } = this.state;
 
     if (isLoading){
@@ -183,6 +218,9 @@ class Content extends Component {
     }
 
     if (token) {
+      var nameArray = JSON.stringify(nameJSON);
+
+
       return(
         <div>
           <div className="contentContainer">
@@ -228,7 +266,23 @@ class Content extends Component {
             <button className="button" onClick={this.onSignUp}>Sign Up</button>
             </div>
           </div>
-        </div>
+          <div className="tableContainer">
+            <table className="userTable">
+            <thead>
+              <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.userRow}
+            </tbody>
+            </table>
+
+          </div>
+
+        </div>//end of if logged in
       );
     }
 

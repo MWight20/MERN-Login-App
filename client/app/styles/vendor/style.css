@@ -97,4 +97,32 @@ ul {
   font-size: 16px;
   border-radius: 6px;
   margin: 8px 0px 8px 0px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: #FFFFFF;
+}
+
+.tableContainer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.userTable {
+  width: 500px;
+  margin: auto;
+  color: #555555;
+  border: 1px solid #555555;
+  border-radius: 6px;
+}
+
+.userTable tr{
+  text-align: left;
+  width: 60px;
+}
+.userTable th td {
+  padding-left: 10px;
+  padding-right: 10px;
 }

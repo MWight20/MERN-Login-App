@@ -60,7 +60,7 @@ module.exports = (app) => {
         })
       }
 
-      console.log('test1'); 
+      //console.log('test1'); 
 
       email = email.toLowerCase();
 
@@ -81,7 +81,20 @@ module.exports = (app) => {
             message: 'Error: Account already exists.'
           });
         }
-
+/*
+        User.find({ email: email }, (err, previousUsers) => {
+          if (err) {
+            return res.send({
+              success: false,
+              message: 'Error: Server error.'
+            });
+          } else if (previousUsers.length > 0) {
+            return res.send({
+              success: false,
+              message: 'Error: Account already exists.'
+            });
+          }
+*/
         // if no server error and account doesn't exist...
         // Save the new user
         const newUser = new User();
@@ -185,7 +198,7 @@ module.exports = (app) => {
       const { token } = query;
       // ?token=test
 
-      // Veriify the token is one of a kind and it's not deleted.
+      // Verify the token is one of a kind and it's not deleted.
       UserSession.find({
         _id: token,
         isDeleted: false
@@ -211,9 +224,27 @@ module.exports = (app) => {
         }
 
       });
-
-
     }); //GET verify (incomplete err)
+
+
+    app.get('/api/users/listNames', (req, res, next) => {
+      const { query } = req;
+
+
+      User.find({
+      }, (err, result) => {
+        if (err){
+          console.log(err);
+          throw new Error("could not list user info");
+        } else {
+          //console.log(result);
+          return res.send({
+            result
+          });
+        }
+      });     
+    });
+
 
     app.get('/api/account/logout', (req, res, next) => {
       //Get the token
@@ -237,13 +268,10 @@ module.exports = (app) => {
             message: 'Error: Server error in logout'
           });
         }
-
         return res.send({
           success: true,
           message: 'Good'
         });
-        
-
       });
     });
 };
