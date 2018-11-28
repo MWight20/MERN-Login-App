@@ -16,6 +16,16 @@ This project uses these technologies:
 npm install
 ```
 
+## Using MongoDB
+```
+This program uses api with intent to connect to MongoDB atlas. 
+To connect to a new database, you must copy and paste your mongoDB URI into config/config.js. 
+
+For the program to function properly follow these steps:
+
+1. rename config/config.example.js => config.js
+2. copy your mongoDB custom user/password uri from atlas and paste it into your db variable.
+```
 
 ## Running
 
